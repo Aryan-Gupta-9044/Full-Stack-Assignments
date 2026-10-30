@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JavaScript Practice</title>
+    </head>
+    <body>
+        <h1>JavaScript Practice</h1>
+        <h2 id="demo">Hello Students</h2>
+        <button onclick="document.getElementById('demo').innerHTML='Hello Aryan bye!'">Click ID</button>
+        
+        <p>Hi there!</p>
+        <button onclick="document.getElementsByTagName('p')[0].style.color='blue'">Click Tag</button>
+        <br>
+        <p1>welcome to JavaScript!</p1>
+        <button onclick="document.getElementsByTagName('p1')[0].style.color='red'">Click Tag</button>
+
+        <h1 class="intro">Hi there!</h1>
+        <button onclick="document.getElementsByClassName('intro')[0].style.color='yellow'">Click Class</button>
+
+        <p class="intro1">Hi there!</p>
+        <button onclick="document.querySelector('.intro1').style.color='green'">Click Query</button>
+        
+        <button onclick="addnumber()">Click to add</button>
+        <h2 id="add">Result</h2>
+        <script>
+            function addnumber(){
+                let a=10;
+                let b=20;
+                let c=a+b;
+                
+                document.getElementById('add').innerHTML="Sum is: "+c;
+            }
+            function add(num1,num2){
+        
+                let c=num1+num2;
+                
+                document.getElementById('result').innerHTML="Sum is: "+c;
+            }
+        </script>
+        <h1 id="num1">Enter 1 value:</h1>
+        <input type="number" id="num1">
+        <h2 id="num2">Enter 2 value:</h2>
+        <input type="number" id="num2">
+        <button onclick="add(num1,num2)">Click to add</button>
+        <h2 id="result">Result</h2>
+
+    </body>
+</html>
