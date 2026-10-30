@@ -1,0 +1,43 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    flex: 1;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}

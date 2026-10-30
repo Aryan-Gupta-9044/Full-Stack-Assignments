@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>XYZ Electricals</title>
+
+</head>
+<body>
+    <header style="background-color:black ; color: white; text-align: center; padding: 20px;">
+        <h1>XYZ Electricals</h1>
+        <p>Your Trusted Electrical Solutions</p>
+    </header>
+    <nav style="background-color: yellow; color:blue;align-items: ; center; padding: 10px;">
+        <a href="#about" style="margin-right: 15px;">About</a>
+        <a href="#products" style="margin-right: 15px;">Products</a>
+        <a href="#order" style="margin-right: 15px;">Orders</a>
+        <a href="#compare" style="margin-right: 15px;">Compare</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <br>
+    <hr>
+    <div class="About">
+        <p>
+            XYZ Electricals is a company selling Electronic products like laptop , mobile and headphone.
+        </p>
+    </div>
+    <hr>
+    <div class="Products">
+        <h2>Products</h2>
+        <ol>
+            <li>Laptop</li>
+            <li>Mobile</li>
+            <li>Headphone</li>
+        </ol>
+    </div>
+    <hr>   
+    <div class="Product Images">
+        <div class="Laptop">
+            <h3>Laptop</h3>
+            <img src="images/laptop.jpg" alt="Laptop" width="300">
+        </div> 
+        <div class="Mobile">
+            <h3>Mobile</h3>
+            <img src="images/mobile.jpg" alt="Mobile" width="300">
+        </div> 
+        <div class="Headphone">
+            <h3>Headphone</h3>
+            <img src="images/headphone.jpg" alt="Headphone" width="300">
+        </div> 
+
+    </div>
+    <hr>
+    <div class="ProductDescription">
+        <div class="Laptop Description">
+            <h3>Laptop</h3>
+            <p>
+                A laptop is a portable computer that combines the components, inputs, outputs, and capabilities of a desktop computer, including the display screen, keyboard, and pointing device (such as a touchpad or trackpad), into a single unit. Laptops are designed for mobile use and can run on battery power or be plugged into an electrical outlet.
+            </p>
+            <p>
+                i7 gen 12 RX 4060 ultra core 16gb ram 1tb ssd
+            </p>
+        </div>
+        <div class="Mobile Description">
+            <h3>Mobile</h3>
+            <p>
+                A mobile device is a portable electronic device that can connect to a network and perform various functions, such as making calls, sending messages, accessing the internet, and running applications. Mobile devices include smartphones, tablets, and other handheld devices.
+            </p>
+            <p>
+                Samsung s40 ultra 12gb ram 1tb storage
+            </p>
+        </div>
+        <div class="Headphone Description">
+            <h3>Headphone</h3>
+            <p>
+                A headphone is a small loudspeaker that is designed to be worn on or in the ear. Headphones are used to listen to audio content privately without disturbing others. They are commonly used with portable music players, computers, and other audio devices.
+            </p>
+            <p>
+                Dolby atmos 20 w 20 h powerbackup
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="Price List">
+        <h2>Price List</h2>
+        <ul>
+            <li>Laptop: Rupees 109999</li>
+            <li>Mobile: Rupees 90099</li>
+            <li>Headphone: Rupees 5999</li>
+        </ul>
+    </div>
+    <hr>    
+    <div class="order">
+        <form>
+            <select name="product" id="product">
+                <option value="laptop">Laptop</option>
+                <option value="mobile">Mobile</option>
+                <option value="headphone">Headphone</option>
+            </select> 
+            quantity: <input type="number" name="quantity" min="1" value="1">
+            <button style="background-color: rgb(247, 33, 33); color: white; padding: 10px; border: none; cursor: pointer;">
+                place order
+            </button>  
+        </form>
+    </div>
+    <hr>
+    <div class="compare">
+        <h2>Compare Products</h2>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Laptop</td>
+                <td>Rupees 109999</td>
+                <td>A portable computer with i7 gen 12 RX 4060 ultra core, 16GB RAM, and 1TB SSD.</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>Rupees 90099</td>
+                <td>A smartphone with Samsung s40 ultra, 12GB RAM, and 1TB storage.</td>
+            </tr>
+            <tr>
+                <td>Headphone</td>
+                <td>Rupees 5999</td>
+                <td>A headphone with Dolby Atmos, 20W power output, and power backup.</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <footer style="background-color: pink; color: darkblue; text-align: center; padding: 20px;">
+        <p>XYZ Electricals</p>
+        <div class="contact">
+            <p>Address: 123 Main Street, Chennai ,Tamil </p>
+            <p>Email: info@xyzelectricals.com</p>
+            <p>Phone: xxxxxxxxxx</p>
+        </div>
+    </footer>
+</body>
+</body>
+<style>
+    .ProductDescription {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }   
+    .ProductDescription > div {
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</html>
