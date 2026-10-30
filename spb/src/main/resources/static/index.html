@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <h1>Task Manager</h1>
+    <button id="themeBtn" class="ghost" type="button" title="Toggle dark mode">Theme</button>
+  </header>
+
+  <section class="quote" id="quote" aria-live="polite">
+    <p id="quoteText">Loading quote...</p>
+    <small><span id="quoteAuthor"></span> <button id="quoteBtn" class="link" type="button">New quote</button></small>
+  </section>
+
+  <section class="stats" id="stats" aria-label="Statistics">
+    <div><b id="stTotal">0</b><span>Total</span></div>
+    <div><b id="stOpen">0</b><span>Open</span></div>
+    <div class="warn"><b id="stOverdue">0</b><span>Overdue</span></div>
+    <div><b id="stToday">0</b><span>Due today</span></div>
+    <div><b id="stRate">0%</b><span>Done</span></div>
+  </section>
+
+  <form id="addForm" class="card add" autocomplete="off">
+    <input id="title" name="title" placeholder="What needs to be done?" maxlength="120" required>
+    <input id="desc" name="description" placeholder="Details (optional)" maxlength="500">
+    <select id="priority" name="priority" aria-label="Priority">
+      <option value="LOW">Low</option>
+      <option value="MEDIUM" selected>Medium</option>
+      <option value="HIGH">High</option>
+    </select>
+    <input id="due" name="dueDate" type="date" aria-label="Due date">
+    <button type="submit">Add task</button>
+  </form>
+
+  <section class="toolbar">
+    <input id="search" type="search" placeholder="Search tasks..." aria-label="Search">
+    <div class="tabs" role="tablist">
+      <button type="button" data-status="all" class="tab active">All</button>
+      <button type="button" data-status="open" class="tab">Open</button>
+      <button type="button" data-status="done" class="tab">Done</button>
+    </div>
+    <select id="fPriority" aria-label="Filter by priority">
+      <option value="">Any priority</option>
+      <option value="HIGH">High</option>
+      <option value="MEDIUM">Medium</option>
+      <option value="LOW">Low</option>
+    </select>
+    <select id="sort" aria-label="Sort">
+      <option value="created">Newest first</option>
+      <option value="due">Due date</option>
+      <option value="priority">Priority</option>
+    </select>
+    <a id="exportLink" class="btn-link" href="/api/tasks/export.csv" download>Export CSV</a>
+    <button id="clearDone" class="ghost danger" type="button">Clear completed</button>
+  </section>
+
+  <ul id="list" class="list"></ul>
+  <p id="empty" class="empty" hidden>No tasks match. Add one above.</p>
+</main>
+
+<dialog id="editDialog">
+  <form id="editForm" method="dialog">
+    <h2>Edit task</h2>
+    <input id="eTitle" maxlength="120" required placeholder="Title">
+    <input id="eDesc" maxlength="500" placeholder="Details (optional)">
+    <div class="row">
+      <select id="ePriority" aria-label="Priority">
+        <option value="LOW">Low</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="HIGH">High</option>
+      </select>
+      <input id="eDue" type="date" aria-label="Due date">
+    </div>
+    <div class="row end">
+      <button type="button" id="eCancel" class="ghost">Cancel</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
