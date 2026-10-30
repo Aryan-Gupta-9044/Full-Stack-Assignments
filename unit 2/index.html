@@ -1,0 +1,26 @@
+<h2 id="count">0</h2>
+
+<button id="dec">-</button>
+<button id="inc">+</button>
+<button id="reset">Reset</button>
+
+<script>
+let count = 0;
+
+const display = document.querySelector("#count");
+
+document.querySelector("#inc").addEventListener("click", function () {
+    count++;
+    display.innerText = count;
+});
+
+document.querySelector("#dec").addEventListener("click", function () {
+    count--;
+    display.innerText = count;
+});
+
+document.querySelector("#reset").addEventListener("click", function () {
+    count = 0;
+    display.innerText = count;
+});
+</script>

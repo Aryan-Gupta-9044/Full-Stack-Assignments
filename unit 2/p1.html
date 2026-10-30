@@ -1,0 +1,32 @@
+<input id="task" placeholder="Enter task">
+<button id="addBtn">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+const input = document.querySelector("#task");
+const button = document.querySelector("#addBtn");
+const list = document.querySelector("#list");
+
+button.addEventListener("click", function () {
+    if (input.value.trim() === "") {
+        alert("Enter a task!");
+        return;
+    }
+
+    const li = document.createElement("li");
+    li.innerText = input.value;
+
+    const delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
+
+    delBtn.addEventListener("click", function () {
+        li.remove();
+    });
+
+    li.appendChild(delBtn);
+    list.appendChild(li);
+
+    input.value = "";
+});
+</script>
